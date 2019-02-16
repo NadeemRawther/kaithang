@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/download"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spin_donor_blooggrp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_main">
+            </Spinner>
+
+
+        <!--    <EditText
+                android:id="@+id/eT_donorPage_bloogGroup"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_main"
+                android:hint="Blood Group"
+                android:paddingLeft="15dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+-->
+            <!--   <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_marginLeft="45dp"
+                   android:layout_marginRight="45dp">-->
+
+            <EditText
+                android:id="@+id/eT_donorPage_date"
+                android:windowSoftInputMode="stateHidden"
+                android:focusableInTouchMode="false"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_main"
+                android:hint="Required Date"
+                android:paddingLeft="15dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <EditText
+                android:id="@+id/eT_donorPage_Time"
+                android:windowSoftInputMode="stateHidden"
+                android:focusableInTouchMode="false"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_main"
+                android:hint="Required Time"
+                android:paddingLeft="15dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+
+            <!--<ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/downloaddate"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                />
+-->
+            <!--   </LinearLayout>
+
+
+   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/tV_donorPage_place"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_main"
+                android:text="THIRUVANANTAHPURAM"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:textColor="#ffffff"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/Spin_donorPage_Area"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_main">
+            </Spinner>
+
+            <EditText
+                android:id="@+id/eT_donorPage_patientName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_main"
+                android:hint="Patient Name"
+                android:paddingLeft="15dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+
+            <EditText
+                android:id="@+id/eT_donorPage_patientPhone"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_main"
+                android:hint="Patient Phone Number"
+                android:paddingLeft="15dp"
+                android:inputType="number"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/bTn_donorPage_search"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_register"
+                android:text="Search"
+                android:textColor="#c70707"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

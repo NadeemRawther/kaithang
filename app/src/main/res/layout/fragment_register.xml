@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bb"
+    android:orientation="vertical">
+    <Spinner
+        android:id="@+id/spin_signin_blooggrp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/shape_main"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp">
+
+    </Spinner>
+    <EditText
+        android:id="@+id/eT_signin_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_main"
+        android:hint="Name"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/eT_signin_DOB"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_main"
+        android:focusableInTouchMode="false"
+        android:hint="Date Of Birth"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spin_signin_gender"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/shape_main"
+        android:layout_marginTop="15dp">
+
+    </Spinner>
+
+
+    <TextView
+        android:id="@+id/tV_signin_palce"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="TVM"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textColorHint="#ffffff"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_main" />
+
+
+    <Spinner
+        android:id="@+id/spin_signin_place"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/shape_main"
+        android:layout_marginTop="15dp">
+
+    </Spinner>
+    <EditText
+        android:id="@+id/eT_signin_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_main"
+        android:hint="Mobile"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/eT_lastDonated"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_main"
+        android:hint="Last donated"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:focusableInTouchMode="false"
+        android:textColorHint="#ffffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bTN_signin_rwegister"
+        android:text="Register"
+        android:textColor="#ba0808"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_register"
+        />
+
+
+</LinearLayout>

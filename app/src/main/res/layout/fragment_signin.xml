@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/download"
+    android:gravity="center_vertical">
+
+    <Spinner
+        android:id="@+id/spnr_bloodGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_main" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:hint="Phone number"
+        android:paddingLeft="10dp"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:background="@drawable/shape_main"
+        android:layout_width="match_parent"
+        android:inputType="phone"
+        android:layout_height="50dp" />
+
+   <!-- <EditText
+        android:id="@+id/et_dob"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:hint="Date of birth"
+        android:paddingLeft="10dp"
+        android:textSize="17dp"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_main"
+        android:focusableInTouchMode="false"
+        android:layout_height="50dp" />
+-->
+    <Button
+        android:id="@+id/bt_signIn"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In" />
+</LinearLayout>

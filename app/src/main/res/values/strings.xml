@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">BloodBank</string>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_item_roomlist">Donor</string>
+    <string name="nav_item_editprofile">Signin</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <!--  <string name="nav_item_repor">Report User</string>
+      <string name="nav_item_changepass">Change Password</string>
+      <string name="nav_item_logout">Logout</string>
+      <string name="nav_item_register">Register</string>-->
+
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_roomlist</item>
+        <item>@string/nav_item_editprofile</item>
+        <!--  <item>@string/nav_item_repor</item>
+          <item>@string/nav_item_changepass</item>
+          <item>@string/nav_item_logout</item>-->
+
+
+    </string-array>
+
+    <string-array name="nav_drawer_labels_signin">
+        <item>@string/nav_item_roomlist</item>
+        <item>@string/profile</item>
+        <item>@string/logout</item>
+        <!--  <item>@string/nav_item_repor</item>
+          <item>@string/nav_item_changepass</item>
+          <item>@string/nav_item_logout</item>-->
+
+
+    </string-array>
+    <string name="title_Donor">Donors</string>
+
+
+    <string-array name="bloodarray">
+        <item>@string/Apositive</item>
+        <item>@string/Anegative</item>
+        <item>@string/Bpositive</item>
+        <item>@string/Bnegetive</item>
+        <item>@string/Opositive</item>
+        <item>@string/ABpositive</item>
+        <item>@string/ABnegetive</item>
+
+
+    </string-array>
+    <string name="Apositive" />
+    <string name="Anegative" />
+    <string name="Bpositive" />
+    <string name="Bnegetive" />
+    <string name="Opositive" />
+    <string name="ABpositive" />
+    <string name="ABnegetive" />
+    <string name="title_activity_main_nav_draw">MainActivityNavDraw</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
