@@ -35,8 +35,8 @@ public class DonorsPage extends Fragment implements DatePickerDialog.OnDateSetLi
 
     static EditText date, time;
     EditText pname;
-    EditText pnumber;
-    Spinner area, bloodGroup;
+    EditText pnumber ,area;
+    Spinner  bloodGroup;
     Button register;
     private int _day;
     private int _month;
@@ -46,8 +46,8 @@ public class DonorsPage extends Fragment implements DatePickerDialog.OnDateSetLi
     public static final String TIMEPICKER_TAG = "timepicker";
 
 
-    String[] SbloodGroup = {"Blood Group", "A+", "A-", "B+", "B-", "O+", "AB+", "AB-"};
-    String[] Sarea = {"Select area", "Palayam", "pattom"};
+    String[] SbloodGroup = {"Blood Group", "A+", "A-", "B+", "B-", "O+","O-","AB+", "AB-"};
+
 
 
    /* public DonorsPage(Context context, int editTextViewID)
@@ -67,7 +67,7 @@ public class DonorsPage extends Fragment implements DatePickerDialog.OnDateSetLi
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         _context = getActivity();
         bloodGroup = (Spinner) v.findViewById(R.id.spin_donor_blooggrp);
-        area = (Spinner) v.findViewById(R.id.Spin_donorPage_Area);
+        area = (EditText) v.findViewById(R.id.Spin_donorPage_Area);
         date = (EditText) v.findViewById(R.id.eT_donorPage_date);
         time = (EditText) v.findViewById(R.id.eT_donorPage_Time);
 
@@ -79,10 +79,10 @@ public class DonorsPage extends Fragment implements DatePickerDialog.OnDateSetLi
         adapter_category.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         bloodGroup.setAdapter(adapter_category);
 
-        ArrayAdapter<String> adapter_category2 = new ArrayAdapter<String>(getActivity(), R.layout.spinner_textview, Sarea);
+       /* ArrayAdapter<String> adapter_category2 = new ArrayAdapter<String>(getActivity(), R.layout.spinner_textview, Sarea);
         adapter_category2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         area.setAdapter(adapter_category2);
-
+*/
 
         date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,7 +151,7 @@ public class DonorsPage extends Fragment implements DatePickerDialog.OnDateSetLi
                                         +"\n"+"Blood group: "+bloodGroup.getSelectedItem().toString()
                                         +"\n"+"Required date: "+date.getText().toString()
                                         +"\n"+"Required time: "+time.getText().toString()
-                                        +"\n"+"Area: "+area.getSelectedItem().toString()
+                                        +"\n"+"Area: "+area.getText().toString()
                                         +"\n"+"Phone No: "+pnumber.getText().toString();
                                 String phNo="+919207663879";
                                 sendSMS(phNo, msg);

@@ -42,7 +42,7 @@ public class SignIn_Page extends Fragment {
     Spinner spnrbloodGroup;
   //  static EditText etdob;
     Button btsignIn;
-    String[] bloodGroup = {"Blood Group", "A+", "A-", "B+", "B-", "O+", "AB+", "AB-"};
+    String[] bloodGroup = {"Blood Group", "A+", "A-", "B+", "B-", "O+","O-", "AB+", "AB-"};
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     ValueEventListener listener;

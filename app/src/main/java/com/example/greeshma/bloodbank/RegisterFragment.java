@@ -31,12 +31,12 @@ import java.util.Calendar;
 
 public class RegisterFragment extends Fragment {
 
-    Spinner blood, gender, area;
+    Spinner blood, gender;
     Button register;
     TextView place;
 
-    static EditText name, mobile, dob, date, time,eT_lastDonated;
-    String[] bloodGroup = {"Blood Group", "A+", "A-", "B+", "B-", "O+", "AB+", "AB-"};
+    static EditText name, mobile, dob, date, time,eT_lastDonated,area;
+    String[] bloodGroup = {"Blood Group", "A+", "A-", "B+", "B-", "O+","O-","AB+", "AB-"};
     String[] genderSpin = {"Select Gender", "Male", "Female"};
     String[] areaSpin = {"Select Area", "Palayam", "Pattom"};
 
@@ -47,7 +47,7 @@ public class RegisterFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_register, container, false);
         blood = (Spinner) v.findViewById(R.id.spin_signin_blooggrp);
         gender = (Spinner) v.findViewById(R.id.spin_signin_gender);
-        area = (Spinner) v.findViewById(R.id.spin_signin_place);
+        area = (EditText) v.findViewById(R.id.spin_signin_place);
         register = (Button) v.findViewById(R.id.bTN_signin_rwegister);
         name = (EditText) v.findViewById(R.id.eT_signin_name);
         mobile = (EditText) v.findViewById(R.id.eT_signin_mobile);
@@ -65,9 +65,9 @@ public class RegisterFragment extends Fragment {
         gender.setAdapter(genderAdapter);
 
 
-        ArrayAdapter<String> areaAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_textview, areaSpin);
+        /*ArrayAdapter<String> areaAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_textview, areaSpin);
         areaAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        area.setAdapter(areaAdapter);
+        area.setAdapter(areaAdapter);*/
 
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -86,13 +86,10 @@ public class RegisterFragment extends Fragment {
                             myRef.child("Phone").setValue(mobile.getText().toString());
                             myRef.child("Blood group").setValue(blood.getSelectedItem().toString());
                             myRef.child("Name").setValue(name.getText().toString());
-                            myRef.child("Place").setValue(area.getSelectedItem().toString());
+                            myRef.child("Place").setValue(area.getText().toString());
                             myRef.child("dateOfBirth").setValue(dob.getText().toString());
                             myRef.child("LastDonated").setValue(eT_lastDonated.getText().toString());
                             Toast.makeText(getActivity(),"You are successfully registred",Toast.LENGTH_LONG).show();
-
-
-
                             SaveSharedPreference.setRegister(getActivity(), "1");
                             Log.e("Signin", "Signin" + SaveSharedPreference.getRegister(getActivity()));
                             SaveSharedPreference.setName(getActivity(), name.getText().toString());

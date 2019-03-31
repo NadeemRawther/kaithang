@@ -104,15 +104,19 @@
                 android:textSize="15sp"
                 android:textColor="#ffffff"/>
 
-            <Spinner
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:id="@+id/Spin_donorPage_Area"
                 android:layout_marginTop="15dp"
+                android:hint = "Area and Hospital"
+                android:textColorHint = "#ffffff"
+                android:textColor="#ffffff"
+                android:paddingLeft = "15dp"
                 android:background="@drawable/shape_main">
-            </Spinner>
+            </EditText>
 
             <EditText
                 android:id="@+id/eT_donorPage_patientName"

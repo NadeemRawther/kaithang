@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
 
 
     <TextView
         android:id="@+id/tv_userDetails"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textColor="#ecebeb"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
         android:background="@drawable/download"
+        android:gravity="center"
         android:hint="Last Donated"
-        android:textColorHint="#fff"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textColorHint="#000000" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tv_userDetails">
+        android:layout_below="@+id/null"
+        android:layout_alignBottom="@+id/tv_userDetails"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="50dp"
+        tools:ignore="UnknownId">
 
         <Button
             android:id="@+id/btn_delete_account"
@@ -48,29 +53,33 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="79dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
         android:orientation="horizontal">
+
         <EditText
             android:id="@+id/et_lastDonateUpdate"
             android:layout_width="0dp"
             android:layout_height="40dp"
+            android:layout_alignStart="@+id/null"
             android:layout_weight=".9"
+            android:background="@drawable/shape_main"
+            android:focusableInTouchMode="false"
             android:hint="   Last donated."
             android:padding="5dp"
             android:textColor="#fff"
-            android:textColorHint="#fff"
-            android:focusableInTouchMode="false"
-            android:background="@drawable/shape_main" />
+            android:textColorHint="#fff" />
+
         <Button
             android:id="@+id/bt_lastDonateUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UPDATE"/>
+            android:text="UPDATE" />
     </LinearLayout>
 
 </RelativeLayout>

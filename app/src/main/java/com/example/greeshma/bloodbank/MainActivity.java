@@ -15,7 +15,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity
@@ -58,11 +57,11 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    /*
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_activity_nav_draw, menu);
+        getMenuInflater().inflate(R.menu.res_for_actionbaricon, menu);
         return true;
     }
 
@@ -74,13 +73,17 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.instaicon) {
+            Uri uri = Uri.parse("https://instagram.com/kaithang_tvm?utm_source=ig_profile_share&igshid=3v0j0p43m63v");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+            //intent.setPackage("com.instagram.android");
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
     }
-*/
+
 
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -115,11 +118,34 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_about) {
             AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
             alert.setTitle("About");
-            alert.setMessage("Blood bank App");
+            alert.setMessage("This is an android based application which will play an important role in saving the life of human beings and which is also its main aim developed an android application will include all the relevant features to provide a means of communication between blood seekers,blood donors and blood banks. This application will help the users fast and easily in such a way that users can locate different volunteer blood donors in short time at emergency situation ");
             alert.setPositiveButton("OK",null);
             alert.show();
         }
+         else if (id == R.id.helpline){
+            String ph = "9207663879";
+            //Toast.makeText(getApplicationContext(), ph, Toast.LENGTH_LONG).show();
+            //  ActivityCompat.requestPermissions((Activity) mCtx, new String[]{Manifest.permission.CALL_PHONE}, 1);
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + ph));
+            startActivity(intent);
+        }
+        else if(id == R.id.helpline2){
 
+            String ph = "9946863342";
+            //Toast.makeText(getApplicationContext(), ph, Toast.LENGTH_LONG).show();
+            //  ActivityCompat.requestPermissions((Activity) mCtx, new String[]{Manifest.permission.CALL_PHONE}, 1);
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + ph));
+            startActivity(intent);
+
+        }else if (id == R.id.helpline3){
+            String ph = "9495469354";
+            //Toast.makeText(getApplicationContext(), ph, Toast.LENGTH_LONG).show();
+            //  ActivityCompat.requestPermissions((Activity) mCtx, new String[]{Manifest.permission.CALL_PHONE}, 1);
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + ph));
+            startActivity(intent);
+
+
+        }
 
 
         if (fragment != null) {

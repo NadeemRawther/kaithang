@@ -62,7 +62,7 @@
         android:layout_height="45dp"
         android:hint="TVM"
         android:padding="10dp"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:textColorHint="#ffffff"
         android:layout_marginLeft="25dp"
@@ -71,16 +71,17 @@
         android:background="@drawable/shape_main" />
 
 
-    <Spinner
+    <EditText
         android:id="@+id/spin_signin_place"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginLeft="25dp"
+        android:hint = "Area and Hospital"
         android:layout_marginRight="25dp"
         android:background="@drawable/shape_main"
         android:layout_marginTop="15dp">
 
-    </Spinner>
+    </EditText>
     <EditText
         android:id="@+id/eT_signin_mobile"
         android:layout_width="match_parent"

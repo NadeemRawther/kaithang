@@ -57,6 +57,15 @@ public class ListSearch_Adapter extends RecyclerView.Adapter<ListSearch_Adapter.
                 mCtx.startActivity(intent);
             }
         });
+        holder.whats_app.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://api.whatsapp.com/send?phone="+donor.getPhoneNo();
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                mCtx.startActivity(i);
+            }
+        });
     }
 
 
@@ -69,7 +78,8 @@ public class ListSearch_Adapter extends RecyclerView.Adapter<ListSearch_Adapter.
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvName, tvPhoneNo, tvPlace;
-        public ImageView iv_call;
+        public ImageView iv_call ,whats_app;
+
 
         public ProductViewHolder(View itemView) {
             super(itemView);
@@ -77,7 +87,7 @@ public class ListSearch_Adapter extends RecyclerView.Adapter<ListSearch_Adapter.
             tvPhoneNo = itemView.findViewById(R.id.tvPhoneNo);
             tvPlace = itemView.findViewById(R.id.tvPlace);
             iv_call = itemView.findViewById(R.id.iv_call);
-
+            whats_app = itemView.findViewById(R.id.whats_call);
 
         }
     }
@@ -91,7 +101,7 @@ public class ListSearch_Adapter extends RecyclerView.Adapter<ListSearch_Adapter.
         } else{
             text = text.toLowerCase();
             for(ListSearch_Item donor: donorListCpy2){
-                if(donor.getName().toLowerCase().contains(text)){
+                if(donor.getPlace().toLowerCase().contains(text)){
                     donorListCpy1.add(donor);
                 }
             }
