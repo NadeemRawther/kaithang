@@ -154,7 +154,7 @@ public class DonorsPage extends Fragment implements DatePickerDialog.OnDateSetLi
                                         +"\n"+"Area: "+area.getText().toString()
                                         +"\n"+"Phone No: "+pnumber.getText().toString();
                                 String phNo="+919207663879";
-                                sendSMS(phNo, msg);
+                                //sendSMS(phNo, msg);
 
 
 

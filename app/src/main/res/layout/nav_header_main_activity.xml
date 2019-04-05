@@ -16,7 +16,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/ic_blood_donate" />
+        app:srcCompat="@drawable/logokaithang" />
 
     <TextView
         android:layout_width="match_parent"
