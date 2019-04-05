@@ -23,7 +23,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/null"
         android:layout_alignBottom="@+id/tv_userDetails"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="50dp"
@@ -66,7 +65,6 @@
             android:id="@+id/et_lastDonateUpdate"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_alignStart="@+id/null"
             android:layout_weight=".9"
             android:background="@drawable/shape_main"
             android:focusableInTouchMode="false"

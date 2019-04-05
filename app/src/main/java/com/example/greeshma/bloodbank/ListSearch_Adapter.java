@@ -60,7 +60,7 @@ public class ListSearch_Adapter extends RecyclerView.Adapter<ListSearch_Adapter.
         holder.whats_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://api.whatsapp.com/send?phone="+donor.getPhoneNo();
+                String url = "https://api.whatsapp.com/send?phone="+"+91"+donor.getPhoneNo();
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 mCtx.startActivity(i);
