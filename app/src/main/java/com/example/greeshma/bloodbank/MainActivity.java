@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contactus) {
             AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
             alert.setTitle("Contact us");
-            alert.setMessage("Email: bloodbankprojectatfirebase@gmail.com\nPhone: 9207663879");
+            alert.setMessage("Email: kaithangbloodbank@gmail.com\nPhone: 9207663879");
             alert.setPositiveButton("Call", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {

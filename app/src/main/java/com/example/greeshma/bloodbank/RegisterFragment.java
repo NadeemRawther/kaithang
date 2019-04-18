@@ -37,7 +37,7 @@ public class RegisterFragment extends Fragment {
 
     static EditText name, mobile, dob, date, time,eT_lastDonated,area;
     String[] bloodGroup = {"Blood Group", "A+", "A-", "B+", "B-", "O+","O-","AB+", "AB-"};
-    String[] genderSpin = {"Select Gender", "Male", "Female"};
+    String[] genderSpin = {"Select Gender","Male", "Female","Other"};
     String[] areaSpin = {"Select Area", "Palayam", "Pattom"};
 
     @Nullable

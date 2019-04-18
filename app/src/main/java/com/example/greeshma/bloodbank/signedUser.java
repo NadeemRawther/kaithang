@@ -1,8 +1,10 @@
 package com.example.greeshma.bloodbank;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -80,9 +82,37 @@ public class signedUser extends Fragment {
         btn_sign_out.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editor.putBoolean("userSigned", false);
-                editor.commit();
-                callSignInFragment();
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+                alertDialogBuilder.setTitle("Exit Application?");
+                alertDialogBuilder
+                        .setMessage("Do you want to sign out..??")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+
+                                        editor.putBoolean("userSigned", false);
+                                        editor.commit();
+                                        callSignInFragment();
+                                    }
+                                })
+
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
+
+
+
+
+
             }
         });
 
@@ -139,30 +169,59 @@ public class signedUser extends Fragment {
                // String DetailsFromSecondLine=details.replace(firstline+"\n","");
                // String SecondLine=DetailsFromSecondLine.substring(0,DetailsFromSecondLine.indexOf("\n"));
                // String bloodGroup =SecondLine.replace("Blood group: ","");
-                String phone="",bloodGroup="";
-                String lines[] = details.split("\n");
-                for (int i=0;i<lines.length;i++){
-                    if (lines[i].contains("Phone")){
-                         phone=lines[i].replace("Phone: ","");
-                    }
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+                alertDialogBuilder.setTitle("Exit Application?");
+                alertDialogBuilder
+                        .setMessage("Do you want to delete account..??")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
 
-                    if (lines[i].contains("Blood group")){
-                        bloodGroup=lines[i].replace("Blood group: ","");
-                    }
-                }
+                                        String phone="",bloodGroup="";
+                                        String lines[] = details.split("\n");
+                                        for (int i=0;i<lines.length;i++){
+                                            if (lines[i].contains("Phone")){
+                                                phone=lines[i].replace("Phone: ","");
+                                            }
+
+                                            if (lines[i].contains("Blood group")){
+                                                bloodGroup=lines[i].replace("Blood group: ","");
+                                            }
+                                        }
 
 
-                Toast.makeText(getActivity(),phone,Toast.LENGTH_LONG).show();
-                Toast.makeText(getActivity(),bloodGroup,Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getActivity(),phone,Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getActivity(),bloodGroup,Toast.LENGTH_LONG).show();
 
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference().child(bloodGroup).child(phone);
-                myRef.removeValue();
-                Toast.makeText(getActivity(),"User account deleted",Toast.LENGTH_LONG).show();
+                                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                        DatabaseReference myRef = database.getReference().child(bloodGroup).child(phone);
+                                        myRef.removeValue();
+                                        Toast.makeText(getActivity(),"User account deleted",Toast.LENGTH_LONG).show();
 
-                editor.putBoolean("userSigned", false);
-                editor.commit();
-                callSignInFragment();
+                                        editor.putBoolean("userSigned", false);
+                                        editor.commit();
+                                        callSignInFragment();
+                                    }
+                                })
+
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
+
+
+
+
+
+
+
             }
         });
 
